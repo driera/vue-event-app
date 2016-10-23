@@ -3,6 +3,7 @@
 const $ = require('jquery');
 let Vue = require('vue/dist/vue.js')
 let vueResource = require('vue-resource');
+let Data = require('./vue-event-data.js');
 Vue.use(vueResource);
 
 let app = new Vue({
@@ -11,7 +12,7 @@ let app = new Vue({
     el: '#events',
 
     data: {
-        event: { name: '', description: '', date: '' },
+        event: { name: '', description: '', color: '', date: '' },
         events: []
     },
 
@@ -21,33 +22,13 @@ let app = new Vue({
 
     methods: {
         fetchEvents: function() {
-            var events = [
-                {
-                    id: 1,
-                    name: 'TIFF',
-                    description: 'Toronto International Film Festival',
-                    date: '09-10-2015'
-                },
-                {
-                    id: 2,
-                    name: 'The Martian Premiere',
-                    description: 'The Martian comes to theatres.',
-                    date: '10-02-2015'
-                },
-                {
-                    id: 3,
-                    name: 'SXSW',
-                    description: 'Music, film and interactive festival in Austin, TX.',
-                    date: '03-11-2016'
-                }
-            ];
-            this.events = events;
+            this.events = Data;
         },
 
         addEvent: function() {
             if(this.event.name) {
                 this.events.push(this.event);
-                this.event = { name: '', description: '', date: '' };
+                this.event = { name: '', description: '', color: '', date: '' };
             }
         },
 
@@ -61,6 +42,7 @@ let app = new Vue({
             this.event = {
                 name: this.events[index].name,
                 description: this.events[index].description,
+                color: this.events[index].color,
                 date: this.events[index].date
             };
             this.events.splice(index, 1);

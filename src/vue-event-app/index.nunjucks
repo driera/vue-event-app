@@ -28,6 +28,26 @@
                             <textarea name="event-description" placeholder="Event Description" v-model="event.description"></textarea>
                         </div>
                         <div class="input-field">
+                            <label for="form-color-red">
+                                <input type="radio" id="form-color-red" name="form-color" value="red" v-model="event.color"> Red
+                            </label>
+                            <label for="form-color-orange">
+                                <input type="radio" id="form-color-orange" name="form-color" value="orange" v-model="event.color"> Orange
+                            </label>
+                            <label for="form-color-yellow">
+                                <input type="radio" id="form-color-yellow" name="form-color" value="yellow" v-model="event.color"> Yellow
+                            </label>
+                            <label for="form-color-green">
+                                <input type="radio" id="form-color-green" name="form-color" value="green" v-model="event.color"> Green
+                            </label>
+                            <label for="form-color-blue">
+                                <input type="radio" id="form-color-blue" name="form-color" value="blue" v-model="event.color"> Blue
+                            </label>
+                            <label for="form-color-purple">
+                                <input type="radio" id="form-color-purple" name="form-color" value="purple" v-model="event.color"> Purple
+                            </label>
+                        </div>
+                        <div class="input-field">
                             <input type="date" name="event-date" placeholder="Date" v-model="event.date">
                         </div>
                         <button class="btn" type="button" name="event-button" v-on:click="addEvent">Send</button>
@@ -36,7 +56,7 @@
                 <div class="ve--list">
                     <div class="ve--title">Your events</div>
                     {{events}}
-                    <a class="ve--item" href="#" v-for="(event,index) in events">
+                    <a href="#" v-for="(event,index) in events" class="ve--item" v-bind:class="event.color">
                         <div class="ve--item-header">
                             <div class="ve--item-title">
                                 <svg class="icon icon-rocket"><use xlink:href="#icon-rocket"></svg>
