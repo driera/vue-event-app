@@ -1,0 +1,13 @@
+header {
+    background-color: $dark-color;
+    transition: $main-transition;
+}
+
+.header-title {
+    padding: 50px 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: $light-color;
+}

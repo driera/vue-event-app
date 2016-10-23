@@ -1,0 +1,57 @@
+{% extends '_layouts/base.nunjucks' %}
+
+{% block config %}
+  {# Correct base url pathing for this page #}
+  {% set baseUrl = '../' %}
+{% endblock %}
+
+{% block body_class %}vue-event-app{% endblock %}
+
+{% block content %}
+    <header>
+        <div class="container">
+            <div class="header-title">
+                <h2>Vue Event App</h2>
+            </div>
+        </div>
+    </header>
+    <section class="main-section">
+        <div class="container">
+            <div class="ve--container" id="events">
+                <div class="ve--form">
+                    <div class="ve--title">Add an event</div>
+                    <form action="" method="post">
+                        <div class="input-field">
+                            <input type="text" class="text" name="event-name" placeholder="Event Name" v-model="event.name">
+                        </div>
+                        <div class="input-field">
+                            <textarea name="event-description" placeholder="Event Description" v-model="event.description"></textarea>
+                        </div>
+                        <div class="input-field">
+                            <input type="date" name="event-date" placeholder="Date" v-model="event.date">
+                        </div>
+                        <button class="btn" type="button" name="event-button" v-on:click="addEvent">Send</button>
+                    </form>
+                </div>
+                <div class="ve--list">
+                    <div class="ve--title">Your events</div>
+                    {{events}}
+                    <a class="ve--item" href="#" v-for="(event,index) in events">
+                        <div class="ve--item-header">
+                            <div class="ve--item-title">${ event.name } ${index}</div>
+                            <div class="ve--item-date">${ event.date }</div>
+                        </div>
+                        <div class="ve--item-content">
+                            <div class="ve--item-description" v-if="event.description">${ event.description }</div>
+                            <div class="ve--item-btns">
+                                <button type="button" class="edit-btn btn" v-on:click="editEvent(index)">Edit</button>
+                                <button type="button" class="delete-btn btn" v-on:click="deleteEvent(index)">Delete</button>
+                            </div>
+                        </div>
+
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

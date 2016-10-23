@@ -1,0 +1,48 @@
+input:not([type="checkbox"]),
+input:not([type="radio"]),
+textarea {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid $gray-color-light;
+    border-radius: 5px;
+    font-weight: lighter;
+    color: $gray-color;
+}
+
+input,
+textarea {
+    &:focus {
+        outline: none;
+        background: rgba($gray-color-light, 0.15);
+    }
+}
+
+textarea {
+    resize: none;
+    min-height: 4.5em;
+}
+
+.input-field {
+    margin-bottom: 20px;
+}
+
+
+button.btn,
+a.btn {
+    padding: 0.75em 1.5em;
+    text-transform: uppercase;
+    border: 0;
+    outline: none;
+    border-radius: 0;
+    color: $light-color;
+    background: adjust-hue($accent-color,20%);
+    transition: $main-transition;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+        background: darken($accent-color, 20%);
+    }
+}

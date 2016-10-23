@@ -1,0 +1,13 @@
+$min-mobile: min-width 480px;
+$min-tablet: min-width 768px;
+$min-desktop: min-width 990px;
+$min-desktop-large: min-width 1200px;
+$min-desktop-xlarge: min-width 1440px;
+
+$accent-color: hsla(random(255),55%,70%,1);
+$light-color: #FFFFFF;
+$gray-color: #82828c;
+$gray-color-light: #cfcfdc;
+$dark-color: #334;
+
+$main-transition: 2s cubic-bezier(.2,.4,.5,1);

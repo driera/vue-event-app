@@ -1,0 +1,13 @@
+{
+  "generator-yeogurt": {
+    "config": {
+      "projectName": "CSSCodex",
+      "htmlOption": "nunjucks",
+      "jsPreprocessor": "es6",
+      "cssOption": "sass",
+      "sassSyntax": "scss",
+      "testFramework": "jasmine"
+    },
+    "version": "1.5.3"
+  }
+}

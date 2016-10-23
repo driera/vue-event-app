@@ -1,0 +1,36 @@
+svg#circles {
+    width: 300px;
+    height: 300px;
+    filter: url('#goo');
+
+
+    [class*="circle"] {
+        width: 50px;
+        height: 50px;
+        transform-origin: 150px 150px;
+        fill: rgba(red, 0.8);
+    }
+}
+
+.circle1 {
+    transform: translate(-10px,0px) scale(0.9);
+}
+
+.circle2 {
+    transform: translate(30px,-5px) scale(1.1);
+}
+
+.circle3 {
+    transform: translate(20px,40px) scale(0.5);
+}
+
+.circle4 {
+    transform: translate(0,20px) scale(0.75);
+}
+
+img {
+display: block;
+-webkit-clip-path: url('#circle_path');
+-moz-clip-path: url('#circle_path');
+clip-path: url('#circle_path');
+}
