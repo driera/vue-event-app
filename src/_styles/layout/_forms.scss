@@ -1,5 +1,4 @@
-input:not([type="checkbox"]),
-input:not([type="radio"]),
+input:not([type="checkbox"]):not([type="radio"]),
 textarea {
     -webkit-appearance: none;
     appearance: none;
@@ -24,10 +23,18 @@ textarea {
     min-height: 4.5em;
 }
 
+label {
+    display: inline-block;
+    margin: 5px 10px;
+    margin-left: 0;
+    color: $gray-color;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
 .input-field {
     margin-bottom: 20px;
 }
-
 
 button.btn,
 a.btn {

@@ -1,3 +1,11 @@
+$ve-red:  hsla(0,55%,70%,1) !default;
+$ve-orange:  hsla(25,55%,70%,1) !default;
+$ve-yellow:  hsla(50,55%,70%,1) !default;
+$ve-green:  hsla(100,55%,70%,1) !default;
+$ve-blue:  hsla(200,55%,70%,1) !default;
+$ve-purple:  hsla(270,55%,70%,1) !default;
+$ve-pink:  hsla(270,55%,70%,1) !default;
+
 .vue-event-app {
     background: #f4f4f4;
 }
@@ -52,10 +60,40 @@
     color: $dark-color;
     background: $light-color;
     box-shadow: 0 15px 30px rgba(#000,0.2);
+    border-top: 5px solid $light-color;
 
     &:last-child {
         margin-bottom: 0;
     }
+
+    &.red {
+        border-top-color: $ve-red;
+    }
+
+    &.orange {
+        border-top-color: $ve-orange;
+    }
+
+    &.yellow {
+        border-top-color: $ve-yellow;
+    }
+
+    &.green {
+        border-top-color: $ve-green;
+    }
+
+    &.blue {
+        border-top-color: $ve-blue;
+    }
+
+    &.purple {
+        border-top-color: $ve-purple;
+    }
+
+    &.pink {
+        border-top-color: $ve-pink;
+    }
+
 }
 
 .ve--item-header {
@@ -76,13 +114,13 @@
         top: 1px;
         left: 0;
         font-size: 0.8em;
-        color: $accent-color;
+        color: $gray-color-light;
     }
 }
 
 .ve--item-title {
     flex: 0 1 auto;
-    padding: 0 20px;
+    padding: 0 25px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -90,7 +128,7 @@
 
 .ve--item-date {
     flex: 0 0 auto;
-    padding-left: 16px;
+    padding-left: 20px;
     font-size: 16px;
     text-align: right;
 
