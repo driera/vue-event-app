@@ -26,19 +26,19 @@ let app = new Vue({
                     id: 1,
                     name: 'TIFF',
                     description: 'Toronto International Film Festival',
-                    date: '2015-09-10'
+                    date: '09-10-2015'
                 },
                 {
                     id: 2,
                     name: 'The Martian Premiere',
                     description: 'The Martian comes to theatres.',
-                    date: '2015-10-02'
+                    date: '10-02-2015'
                 },
                 {
                     id: 3,
                     name: 'SXSW',
                     description: 'Music, film and interactive festival in Austin, TX.',
-                    date: '2016-03-11'
+                    date: '03-11-2016'
                 }
             ];
             this.events = events;

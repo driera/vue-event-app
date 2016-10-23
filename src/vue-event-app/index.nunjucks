@@ -38,14 +38,28 @@
                     {{events}}
                     <a class="ve--item" href="#" v-for="(event,index) in events">
                         <div class="ve--item-header">
-                            <div class="ve--item-title">${ event.name } ${index}</div>
-                            <div class="ve--item-date">${ event.date }</div>
+                            <div class="ve--item-title">
+                                <svg class="icon icon-rocket"><use xlink:href="#icon-rocket"></svg>
+                                ${ event.name }
+                            </div>
+                            <div class="ve--item-date">
+                                <svg class="icon icon-calendar"><use xlink:href="#icon-calendar"></svg>
+                                ${ event.date }
+                            </div>
                         </div>
                         <div class="ve--item-content">
-                            <div class="ve--item-description" v-if="event.description">${ event.description }</div>
+                            <div class="ve--item-description" v-if="event.description">
+                                ${ event.description }
+                            </div>
                             <div class="ve--item-btns">
-                                <button type="button" class="edit-btn btn" v-on:click="editEvent(index)">Edit</button>
-                                <button type="button" class="delete-btn btn" v-on:click="deleteEvent(index)">Delete</button>
+                                <button type="button" class="edit-btn btn" v-on:click="editEvent(index)">
+                                    <svg class="icon icon-pencil"><use xlink:href="#icon-pencil"></svg>
+                                    <span>Edit</span>
+                                </button>
+                                <button type="button" class="delete-btn btn" v-on:click="deleteEvent(index)">
+                                    <svg class="icon icon-blocked"><use xlink:href="#icon-blocked"></svg>
+                                    <span>Delete</span>
+                                </button>
                             </div>
                         </div>
 

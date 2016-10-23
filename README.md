@@ -1,51 +1,28 @@
-# Csscodex readme
+# Vue Events App
 
-Generated on 2016-10-20 using
-[generator-yeogurt@1.5.3](https://github.com/larsonjj/generator-yeogurt)
+Based on [this tutorial](https://scotch.io/tutorials/build-an-app-with-vue-js-a-lightweight-alternative-to-angularjs) and generated with [generator-yeogurt@1.5.3](https://github.com/larsonjj/generator-yeogurt).
 
-## Description
+### Technologies used
 
-This is an example readme file.
-Describe your site/app here.
+- JavaScript: [Browserify](http://browserify.org/) with ES6/2015 support through [Babel](https://babeljs.io/) & [Node](https://nodejs.org/)
 
-## Technologies used
+- Testing: [Jasmine](http://jasmine.github.io/)
 
-JavaScript
-- [Browserify](http://browserify.org/) with ES6/2015 support through [Babel](https://babeljs.io/)
-- [Node](https://nodejs.org/)
+- Styles: [Sass](http://sass-lang.com/) via ([node-sass](https://github.com/sass/node-sass))
 
-Testing
-- [Karma](http://karma-runner.github.io/0.13/index.html)
-- [Jasmine](http://jasmine.github.io/)
+- Markup: [Nunjucks](https://mozilla.github.io/nunjucks/)
 
-Styles
-- [Sass](http://sass-lang.com/) via ([node-sass](https://github.com/sass/node-sass))
+- Optimization: [Imagemin](https://github.com/imagemin/imagemin) & [Uglify](https://github.com/mishoo/UglifyJS)
 
-Markup
-- [Nunjucks](https://mozilla.github.io/nunjucks/)
+- Server: [BrowserSync](http://www.browsersync.io/)
 
-Optimization
-- [Imagemin](https://github.com/imagemin/imagemin)
-- [Uglify](https://github.com/mishoo/UglifyJS)
+- Linting: [ESlint](http://eslint.org/)
 
-Server
-- [BrowserSync](http://www.browsersync.io/)
+- Automation: [Gulp](http://gulpjs.com)
 
-Linting
-- [ESlint](http://eslint.org/)
+- Code Management: [Editorconfig](http://editorconfig.org/) & [Git](https://git-scm.com/)
 
-Automation
-- [Gulp](http://gulpjs.com)
-
-Code Management
-- [Editorconfig](http://editorconfig.org/)
-- [Git](https://git-scm.com/)
-
-
-## Automated tasks
-
-This project uses [Gulp](http://gulpjs.com) to run automated tasks for development and production builds.
-The tasks are as follows:
+### Automated tasks
 
 `gulp --production`: Same as `gulp serve --production` also run `gulp test` and  not boot up production server
 
